@@ -59,7 +59,7 @@ export function ContactSection() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) {
       showToast('Validation Error', 'Please complete the highlighted fields.', 'error');
@@ -68,32 +68,76 @@ export function ContactSection() {
 
     setSubmitting(true);
 
-    // Simulate sending & trigger mailto fallback
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/siddiqesq2004@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || 'Not Specified',
+          projectType: formData.projectType,
+          message: formData.message,
+          _subject: `[Portfolio Inquiry] ${formData.projectType} from ${formData.name}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitting(false);
+        setSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          projectType: projectTypes[0],
+          message: '',
+        });
+
+        // Trigger celebratory confetti
+        confetti({
+          particleCount: 90,
+          spread: 70,
+          origin: { y: 0.8 },
+          colors: ['#38bdf8', '#818cf8', '#06b6d4', '#10b981'],
+        });
+
+        showToast(
+          'Message Sent Directly!',
+          'Your message was delivered to siddiqesq2004@gmail.com. Mohamed will get back to you shortly!',
+          'success'
+        );
+      } else {
+        throw new Error('Failed to send email via service');
+      }
+    } catch (err) {
       setSubmitting(false);
       setSubmitted(true);
 
-      // Trigger celebratory confetti
       confetti({
-        particleCount: 80,
-        spread: 60,
+        particleCount: 60,
+        spread: 50,
         origin: { y: 0.8 },
-        colors: ['#38bdf8', '#818cf8', '#06b6d4', '#10b981'],
+        colors: ['#38bdf8', '#818cf8', '#06b6d4'],
       });
 
       showToast(
         'Message Prepared!',
-        `Thank you ${formData.name}. Opening your mail client with your pre-filled inquiry...`,
+        'Opening your email client to send directly to siddiqesq2004@gmail.com...',
         'success'
       );
 
-      // Construct mailto link
+      // Fallback: Construct mailto link
       const subject = encodeURIComponent(`[${formData.projectType}] Project Inquiry from ${formData.name}`);
       const body = encodeURIComponent(
         `Hi Mohamed,\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || 'N/A'}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}\n`
       );
-      window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
-    }, 600);
+      window.location.href = `mailto:siddiqesq2004@gmail.com?subject=${subject}&body=${body}`;
+    }
   };
 
   const copyToClipboard = (text: string, label: string) => {
