@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sid.github.io/sitemap.xml
