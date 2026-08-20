@@ -69,9 +69,13 @@ export function Navbar({ onOpenCommandPalette }: NavbarProps) {
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded-full"
             aria-label="Mohamed Siddiqe Home"
           >
-            <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-tr from-cyan-500 to-blue-600 font-mono text-xs font-bold text-slate-950 shadow-md group-hover:scale-105 transition-transform">
-              <span>{siteConfig.initials}</span>
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-slate-950 animate-pulse" />
+            <div className="relative flex items-center justify-center w-8 h-8 rounded-full overflow-hidden border border-cyan-500/40 shadow-md group-hover:scale-105 group-hover:border-cyan-400 transition-all bg-slate-900 shrink-0">
+              <img
+                src="/profile.png"
+                alt="Mohamed Siddiqe"
+                className="w-full h-full object-cover"
+              />
+              <span className="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-400 border border-slate-950 animate-pulse" />
             </div>
 
             <div className="flex flex-col">

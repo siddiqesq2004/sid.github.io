@@ -120,9 +120,28 @@ export function ContactSection() {
         >
           {/* Main Info Card */}
           <div className="p-6 sm:p-7 rounded-3xl bg-slate-950/80 border border-white/10 backdrop-blur-2xl shadow-xl">
-            <div className="flex items-center gap-2 mb-4">
-              <Sparkles className="w-5 h-5 text-cyan-400" />
-              <h3 className="text-lg font-bold text-white">Direct Channels</h3>
+            {/* Profile Avatar Header */}
+            <div className="flex items-center gap-4 pb-4 mb-4 border-b border-white/[0.08]">
+              <div className="relative w-14 h-14 rounded-2xl overflow-hidden border border-cyan-500/40 shrink-0 shadow-lg bg-slate-900">
+                <img
+                  src="/profile.png"
+                  alt="Mohamed Siddiqe"
+                  className="w-full h-full object-cover object-top"
+                />
+                <span className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-slate-950 animate-pulse" />
+              </div>
+              <div className="min-w-0">
+                <h3 className="text-sm sm:text-base font-bold text-white leading-tight truncate">
+                  {siteConfig.name}
+                </h3>
+                <p className="text-xs text-cyan-300 font-mono mt-0.5">
+                  Full-Stack SaaS & AI
+                </p>
+                <div className="flex items-center gap-1.5 mt-1 text-[11px] text-slate-400">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  <span>Direct Communication Channels</span>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-3.5">
