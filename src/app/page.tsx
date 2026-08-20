@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Navbar } from '@/components/navigation/Navbar';
 import { CommandPalette } from '@/components/navigation/CommandPalette';
-import { CustomCursor } from '@/components/ui/CustomCursor';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ToastProvider } from '@/components/ui/Toast';
 import { SmoothScroll } from '@/components/providers/SmoothScroll';
@@ -31,9 +30,6 @@ export default function HomePage() {
     <ToastProvider>
       <SmoothScroll>
         <div className="relative min-h-screen bg-[#07080a] text-slate-100 overflow-x-hidden selection:bg-cyan-500/20 selection:text-white">
-          {/* Custom Desktop Magnetic Cursor */}
-          <CustomCursor />
-
           {/* Dynamic Scroll Progress Bar */}
           <ScrollProgress />
 
