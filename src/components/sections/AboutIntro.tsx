@@ -49,7 +49,7 @@ export function AboutIntro() {
 
           <p>
             With a background in <strong className="text-white">Mechatronics Engineering</strong> at{' '}
-            <strong className="text-white">SNS College of Technology (CGPA 8.5)</strong>, I combine low-level hardware intuition with modern cloud systems, microservices, and agentic AI architectures.
+            <strong className="text-white">SNS College of Technology (CGPA 8.7)</strong>, I combine low-level hardware intuition with modern cloud systems, microservices, and agentic AI architectures.
           </p>
 
           {/* Core Focus Areas */}
@@ -154,7 +154,7 @@ export function AboutIntro() {
               </li>
               <li className="flex items-center justify-between text-slate-300 pb-2 border-b border-white/[0.04]">
                 <span className="text-slate-400">Education</span>
-                <span className="font-medium text-cyan-300">B.E. Mechatronics (CGPA 8.5)</span>
+                <span className="font-medium text-cyan-300">B.E. Mechatronics (CGPA 8.7)</span>
               </li>
               <li className="flex items-center justify-between text-slate-300 pb-2 border-b border-white/[0.04]">
                 <span className="text-slate-400">NDA Readiness</span>

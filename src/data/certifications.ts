@@ -50,9 +50,9 @@ export const educationData = {
   degree: 'B.E. Mechatronics Engineering',
   institution: 'SNS College of Technology',
   location: 'Coimbatore, India',
-  period: '2021 – Present',
-  gpa: '8.5 / 10',
-  gpaNote: 'CGPA up to 7th Semester',
+  period: '2022 – 2026 Graduate',
+  gpa: '8.7 / 10',
+  gpaNote: 'CGPA',
   description: 'Specialized interdisciplinary engineering combining Computer Science, Robotics, Embedded Systems, IoT, Control Engineering, and Electronics.',
   schooling: [
     { level: 'HSC (Class XII)', school: 'National Public School, Namakkal', score: '80%' },

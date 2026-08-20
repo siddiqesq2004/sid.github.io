@@ -232,7 +232,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-slate-500">B.E. Mechatronics (CGPA 8.5)</span>
+                <span className="text-slate-500">B.E. Mechatronics (CGPA 8.7)</span>
               </li>
               <li>
                 <span className="text-slate-500">AWS GenAI & Cloud Certified</span>

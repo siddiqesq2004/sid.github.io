@@ -28,7 +28,7 @@ export const siteConfig = {
     { value: 6, suffix: "+", label: "Production Platforms", desc: "SaaS & AI systems shipped to live users" },
     { value: 3, suffix: "+", label: "Years Experience", desc: "Software, full-stack & data engineering" },
     { value: 10, suffix: "+", label: "Engineered Projects", desc: "From multi-tenant ERPs to robotics" },
-    { value: 4, suffix: "", label: "Languages Spoken", desc: "English (Fluent), Tamil, Japanese, Hindi" },
+    { value: 4, suffix: "", label: "Languages Spoken", desc: "English (Fluent), Tamil, Japanese (Basic), Hindi" },
   ],
   
   domains: [

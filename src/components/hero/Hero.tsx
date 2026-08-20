@@ -156,7 +156,7 @@ export function Hero() {
           </div>
           <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
             <Cpu className="w-3.5 h-3.5 text-amber-400" />
-            <span>B.E. Mechatronics (CGPA 8.5)</span>
+            <span>B.E. Mechatronics (CGPA 8.7)</span>
           </div>
         </motion.div>
 

@@ -220,6 +220,6 @@ export const skillCategories = [
 export const humanLanguages = [
   { language: 'English', proficiency: 'Fluent (Read / Write / Speak)', badge: 'Professional Working' },
   { language: 'Tamil', proficiency: 'Native (Read / Write / Speak)', badge: 'Native' },
-  { language: 'Japanese', proficiency: 'Read / Write / Speak', badge: 'Foreign Language' },
+  { language: 'Japanese Basic', proficiency: 'Basic (Read / Write / Speak)', badge: 'Foreign Language' },
   { language: 'Hindi', proficiency: 'Spoken Proficiency', badge: 'Conversational' }
 ];
